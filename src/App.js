@@ -1,11 +1,10 @@
-import './App.css';
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import Home from "./pages/Home";
 import ForgotPassword from "./pages/ForgotPassword";
 import Offers from "./pages/Offers";
 import Profile from "./pages/Profile";
 import SignIn from "./pages/SignIn";
-import SignOut from "./pages/SignOut";
+import SignUp from "./pages/SignUp";     
 import Header from './components/Header';
 
 function App() {
@@ -18,7 +17,7 @@ function App() {
         <Route path='/offers' element={<Offers />} />
         <Route path='/profile' element={<Profile />} />
         <Route path='/Sign-in' element={<SignIn />} />
-        <Route path='/Sign-out' element={<SignOut />} />
+        <Route path='/Sign-up' element={<SignUp />} />
       </Routes>
     </Router>
   );
