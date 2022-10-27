@@ -1,7 +1,17 @@
-import React from 'react'
+import {React, useEffect} from 'react'
 import {useLocation, useNavigate} from "react-router-dom"
-
+//
+import { getAuth,onAuthStateChanged } from "firebase/auth";
+//
 export default function Header() {
+  {/*////////CHECK USER////////*/}
+  useEffect(() => {
+    const auth = getAuth();
+    onAuthStateChanged(auth, (user) => {
+        console.log(user)
+    });
+  }, []);
+  {/*//////////////////////////*/}
   const location = useLocation();
   const navigate = useNavigate();
   function pathMatchRoute(route){

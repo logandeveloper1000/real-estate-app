@@ -2,7 +2,7 @@ import {React, useState} from 'react'
 import {AiFillEyeInvisible,AiFillEye} from 'react-icons/ai'
 import { Link, useNavigate } from "react-router-dom";
 import OAuth from '../components/OAuth';
-import { signInWithEmailAndPassword, getAuth } from "firebase/auth";
+import { signInWithEmailAndPassword, getAuth, onAuthStateChanged } from "firebase/auth";
 import { toast } from "react-toastify";
 
 export default function SignIn() {
@@ -19,6 +19,7 @@ export default function SignIn() {
       [e.target.id]: e.target.value
     }))
   }
+  
   async function onSubmit(e){
     e.preventDefault()
     try{
