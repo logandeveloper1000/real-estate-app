@@ -11,6 +11,7 @@ import Header from './components/Header';
 import EditListing from "./pages/EditListing";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Listing from "./pages/Listing";
 
 
 
@@ -29,6 +30,7 @@ function App() {
           <Route path='/profile' element={<Profile />} />
           <Route path='/sign-in' element={<SignIn />} />
           <Route path='/sign-up' element={<SignUp />} />
+          <Route path='/category/:categoryName/:listingId' element={<Listing/>} />
           <Route path="create-listing" element={<PrivateRoute/>}>
             <Route path='/create-listing' element={<CreateListing/>} />
           </Route>
